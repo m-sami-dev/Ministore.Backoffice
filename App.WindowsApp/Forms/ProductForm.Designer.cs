@@ -93,7 +93,7 @@ namespace App.WindowsApp.Forms
             btnCancel.Margin = new Padding(3, 40, 80, 3);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(89, 32);
-            btnCancel.TabIndex = 2;
+            btnCancel.TabIndex = 0;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
             btnCancel.Click += btnCancel_Click;
@@ -106,7 +106,7 @@ namespace App.WindowsApp.Forms
             btnSave.Margin = new Padding(3, 40, 80, 3);
             btnSave.Name = "btnSave";
             btnSave.Size = new Size(88, 32);
-            btnSave.TabIndex = 3;
+            btnSave.TabIndex = 1;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
@@ -150,7 +150,7 @@ namespace App.WindowsApp.Forms
             pnlStock.Location = new Point(3, 96);
             pnlStock.Name = "pnlStock";
             pnlStock.Size = new Size(154, 25);
-            pnlStock.TabIndex = 3;
+            pnlStock.TabIndex = 10;
             // 
             // lblStock
             // 
@@ -169,7 +169,7 @@ namespace App.WindowsApp.Forms
             pnlName.Location = new Point(3, 3);
             pnlName.Name = "pnlName";
             pnlName.Size = new Size(154, 25);
-            pnlName.TabIndex = 4;
+            pnlName.TabIndex = 6;
             // 
             // lblName
             // 
@@ -188,7 +188,7 @@ namespace App.WindowsApp.Forms
             pnlCategory.Location = new Point(3, 34);
             pnlCategory.Name = "pnlCategory";
             pnlCategory.Size = new Size(154, 25);
-            pnlCategory.TabIndex = 5;
+            pnlCategory.TabIndex = 7;
             // 
             // lblCategory
             // 
@@ -207,7 +207,7 @@ namespace App.WindowsApp.Forms
             pnlPrice.Location = new Point(3, 65);
             pnlPrice.Name = "pnlPrice";
             pnlPrice.Size = new Size(154, 25);
-            pnlPrice.TabIndex = 6;
+            pnlPrice.TabIndex = 9;
             // 
             // lblPrice
             // 
@@ -226,7 +226,7 @@ namespace App.WindowsApp.Forms
             pnlStatus.Location = new Point(3, 127);
             pnlStatus.Name = "pnlStatus";
             pnlStatus.Size = new Size(154, 25);
-            pnlStatus.TabIndex = 7;
+            pnlStatus.TabIndex = 11;
             // 
             // lblStatus
             // 
@@ -245,7 +245,7 @@ namespace App.WindowsApp.Forms
             pnlid.Location = new Point(3, 158);
             pnlid.Name = "pnlid";
             pnlid.Size = new Size(154, 25);
-            pnlid.TabIndex = 8;
+            pnlid.TabIndex = 0;
             // 
             // lblID
             // 
@@ -263,7 +263,7 @@ namespace App.WindowsApp.Forms
             txtName.Location = new Point(163, 3);
             txtName.Name = "txtName";
             txtName.Size = new Size(634, 23);
-            txtName.TabIndex = 9;
+            txtName.TabIndex = 0;
             // 
             // cmbCategory
             // 
@@ -273,7 +273,7 @@ namespace App.WindowsApp.Forms
             cmbCategory.Location = new Point(163, 34);
             cmbCategory.Name = "cmbCategory";
             cmbCategory.Size = new Size(634, 23);
-            cmbCategory.TabIndex = 10;
+            cmbCategory.TabIndex = 1;
             // 
             // numPrice
             // 
@@ -283,7 +283,7 @@ namespace App.WindowsApp.Forms
             numPrice.Maximum = new decimal(new int[] { 1000000, 0, 0, 0 });
             numPrice.Name = "numPrice";
             numPrice.Size = new Size(634, 23);
-            numPrice.TabIndex = 11;
+            numPrice.TabIndex = 2;
             numPrice.ValueChanged += numPrice_ValueChanged;
             // 
             // numStock
@@ -293,7 +293,7 @@ namespace App.WindowsApp.Forms
             numStock.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numStock.Name = "numStock";
             numStock.Size = new Size(634, 23);
-            numStock.TabIndex = 12;
+            numStock.TabIndex = 3;
             // 
             // cmbStatus
             // 
@@ -303,7 +303,7 @@ namespace App.WindowsApp.Forms
             cmbStatus.Location = new Point(163, 127);
             cmbStatus.Name = "cmbStatus";
             cmbStatus.Size = new Size(634, 23);
-            cmbStatus.TabIndex = 13;
+            cmbStatus.TabIndex = 4;
             // 
             // txtID
             // 
@@ -313,7 +313,7 @@ namespace App.WindowsApp.Forms
             txtID.Name = "txtID";
             txtID.ReadOnly = true;
             txtID.Size = new Size(634, 23);
-            txtID.TabIndex = 14;
+            txtID.TabIndex = 5;
             // 
             // ProductForm
             // 
