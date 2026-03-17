@@ -1,4 +1,7 @@
 ﻿
+using App.Core.Models;
+using App.Core.Utilities;
+
 namespace App.WindowsApp.Forms
 {
     partial class ProductForm
@@ -346,10 +349,39 @@ namespace App.WindowsApp.Forms
             PerformLayout();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
+        //private void btnSave_Click(object sender, EventArgs e)
+        //{
+        //    //throw new NotImplementedException();
+
+        //    if (_mode == ProductFormModeEnum.Add)
+        //    {
+        //        Product newProduct = new Product();
+        //        newProduct.Name = txtName.Text;
+        //        newProduct.Category = (ProductCategoryEnum)cmbCategory.SelectedItem;
+        //        newProduct.Status = (ProductStatusEnum)cmbStatus.SelectedItem;
+        //        newProduct.Price = numPrice.Value;
+        //        newProduct.Stock = (int)numStock.Value;
+
+        //        //_product = _service.Add(newProduct);
+        //        //txtID.Text = _product.Id;
+
+
+        //        Product temp = _service.Add(newProduct);
+        //        txtID.Text = temp?.Id ?? "";
+        //    }
+        //    else if (_mode == ProductFormModeEnum.Edit)
+        //    {
+        //        _product.Name = txtName.Text;
+        //        _product.Category = (ProductCategoryEnum)cmbCategory.SelectedItem;
+        //        _product.Status = (ProductStatusEnum)cmbStatus.SelectedItem;
+        //        _product.Price = numPrice.Value;
+        //        _product.Stock = (int)numStock.Value;
+
+        //        bool isUpdated = _service.Update(_product);
+
+        //    }
+
+        //}
 
         #endregion
 

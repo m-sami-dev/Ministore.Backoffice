@@ -51,19 +51,47 @@ namespace App.core.Services
         // Existing methods (unchanged)
         public Product add(Product product)
         {
-            throw new NotImplementedException();
+            if (product != null)
+            {
+                product.Id = GenerateId();
+                _products.Add(product);
+            }
+            return product;
+           
         }
         public bool Update(Product product)
         {
+            if (product!= null)
+            {
+                Product? existing = _products.Find(p=>p.Id==product.Id);
+                if (existing == null) return false;
+
+                existing.Name = product.Name;
+                existing.Category = product.Category;
+                existing.Price = product.Price;
+                existing.Status = product.Status;
+                existing.Stock = product.Stock;
+
+                return true;
+
+
+
+
+            }
             return false;
         }
         public bool Delete(Product product)
         {
-            return false;
+            if (product == null) return false;
+            Product prodToBeDeleted = GetById(product.Id);
+            if (prodToBeDeleted == null) return false;
+            _products.Remove(prodToBeDeleted);
+            return true;
         }
         public Product GetbyID(string id)
         {
-            throw new NotImplementedException();
+            Product? prod = _products.Find(p => p.Id == id);
+            return prod;
         }
         public List<Product> GetAll()
         {
@@ -71,7 +99,17 @@ namespace App.core.Services
         }
         public List<Product> Search(string text, ProductCategoryEnum? category, ProductStatusEnum? status)
         {
-            throw new NotImplementedException();
+            List<Product> _filtered = _products.ToList();
+            _filtered= _filtered.Where(p => p.Name.Contains(text)).ToList();
+            if(category is not null)
+            {
+                _filtered = _filtered.Where(p => p.Category == category).ToList();
+            }
+            if (status is not null)
+            {
+                _filtered = _filtered.Where(p => p.Status == status).ToList();
+            }
+            return _filtered;
         }
         private void GenerateFakeProducts()
         {
