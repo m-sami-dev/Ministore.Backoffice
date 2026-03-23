@@ -283,7 +283,7 @@
             dgvProducts.ReadOnly = true;
             dgvProducts.RowHeadersVisible = false;
             dgvProducts.RowHeadersWidth = 51;
-            dgvProducts.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvProducts.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgvProducts.Size = new Size(937, 436);
             dgvProducts.TabIndex = 0;
             // 

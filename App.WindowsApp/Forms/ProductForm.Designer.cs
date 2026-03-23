@@ -33,14 +33,12 @@ namespace App.WindowsApp.Forms
         private void InitializeComponent()
         {
             pnltop = new Panel();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            flpBottom = new FlowLayoutPanel();
             btnCancel = new Button();
             btnSave = new Button();
             tblProductForm = new TableLayoutPanel();
             pnlStock = new Panel();
             lblStock = new Label();
-            pnlName = new Panel();
-            lblName = new Label();
             pnlCategory = new Panel();
             lblCategory = new Label();
             pnlPrice = new Panel();
@@ -55,38 +53,40 @@ namespace App.WindowsApp.Forms
             numStock = new NumericUpDown();
             cmbStatus = new ComboBox();
             txtID = new TextBox();
+            lblName = new Label();
+            pnlName = new Panel();
             pnltop.SuspendLayout();
-            flowLayoutPanel1.SuspendLayout();
+            flpBottom.SuspendLayout();
             tblProductForm.SuspendLayout();
             pnlStock.SuspendLayout();
-            pnlName.SuspendLayout();
             pnlCategory.SuspendLayout();
             pnlPrice.SuspendLayout();
             pnlStatus.SuspendLayout();
             pnlid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numPrice).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numStock).BeginInit();
+            pnlName.SuspendLayout();
             SuspendLayout();
             // 
             // pnltop
             // 
-            pnltop.Controls.Add(flowLayoutPanel1);
+            pnltop.Controls.Add(flpBottom);
             pnltop.Dock = DockStyle.Bottom;
             pnltop.Location = new Point(0, 350);
             pnltop.Name = "pnltop";
             pnltop.Size = new Size(800, 100);
             pnltop.TabIndex = 0;
             // 
-            // flowLayoutPanel1
+            // flpBottom
             // 
-            flowLayoutPanel1.Controls.Add(btnCancel);
-            flowLayoutPanel1.Controls.Add(btnSave);
-            flowLayoutPanel1.Dock = DockStyle.Fill;
-            flowLayoutPanel1.FlowDirection = FlowDirection.RightToLeft;
-            flowLayoutPanel1.Location = new Point(0, 0);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(800, 100);
-            flowLayoutPanel1.TabIndex = 2;
+            flpBottom.Controls.Add(btnCancel);
+            flpBottom.Controls.Add(btnSave);
+            flpBottom.Dock = DockStyle.Fill;
+            flpBottom.FlowDirection = FlowDirection.RightToLeft;
+            flpBottom.Location = new Point(0, 0);
+            flpBottom.Name = "flpBottom";
+            flpBottom.Size = new Size(800, 100);
+            flpBottom.TabIndex = 2;
             // 
             // btnCancel
             // 
@@ -121,7 +121,6 @@ namespace App.WindowsApp.Forms
             tblProductForm.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tblProductForm.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 80F));
             tblProductForm.Controls.Add(pnlStock, 0, 3);
-            tblProductForm.Controls.Add(pnlName, 0, 0);
             tblProductForm.Controls.Add(pnlCategory, 0, 1);
             tblProductForm.Controls.Add(pnlPrice, 0, 2);
             tblProductForm.Controls.Add(pnlStatus, 0, 4);
@@ -132,6 +131,7 @@ namespace App.WindowsApp.Forms
             tblProductForm.Controls.Add(numStock, 1, 3);
             tblProductForm.Controls.Add(cmbStatus, 1, 4);
             tblProductForm.Controls.Add(txtID, 1, 5);
+            tblProductForm.Controls.Add(pnlName, 0, 0);
             tblProductForm.Dock = DockStyle.Fill;
             tblProductForm.Location = new Point(0, 0);
             tblProductForm.Name = "tblProductForm";
@@ -164,25 +164,6 @@ namespace App.WindowsApp.Forms
             lblStock.Size = new Size(36, 15);
             lblStock.TabIndex = 0;
             lblStock.Text = "Stock";
-            // 
-            // pnlName
-            // 
-            pnlName.Controls.Add(lblName);
-            pnlName.Dock = DockStyle.Fill;
-            pnlName.Location = new Point(3, 3);
-            pnlName.Name = "pnlName";
-            pnlName.Size = new Size(154, 25);
-            pnlName.TabIndex = 6;
-            // 
-            // lblName
-            // 
-            lblName.Anchor = AnchorStyles.Left;
-            lblName.Location = new Point(47, 1);
-            lblName.Name = "lblName";
-            lblName.Size = new Size(49, 19);
-            lblName.TabIndex = 0;
-            lblName.Text = "Name";
-            lblName.Click += lblName_Click;
             // 
             // pnlCategory
             // 
@@ -318,6 +299,25 @@ namespace App.WindowsApp.Forms
             txtID.Size = new Size(634, 23);
             txtID.TabIndex = 5;
             // 
+            // lblName
+            // 
+            lblName.Anchor = AnchorStyles.Left;
+            lblName.Location = new Point(47, 1);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(49, 19);
+            lblName.TabIndex = 0;
+            lblName.Text = "Name";
+            lblName.Click += lblName_Click;
+            // 
+            // pnlName
+            // 
+            pnlName.Controls.Add(lblName);
+            pnlName.Dock = DockStyle.Fill;
+            pnlName.Location = new Point(3, 3);
+            pnlName.Name = "pnlName";
+            pnlName.Size = new Size(154, 25);
+            pnlName.TabIndex = 6;
+            // 
             // ProductForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -329,12 +329,11 @@ namespace App.WindowsApp.Forms
             StartPosition = FormStartPosition.CenterParent;
             Text = "ProductForm";
             pnltop.ResumeLayout(false);
-            flowLayoutPanel1.ResumeLayout(false);
+            flpBottom.ResumeLayout(false);
             tblProductForm.ResumeLayout(false);
             tblProductForm.PerformLayout();
             pnlStock.ResumeLayout(false);
             pnlStock.PerformLayout();
-            pnlName.ResumeLayout(false);
             pnlCategory.ResumeLayout(false);
             pnlCategory.PerformLayout();
             pnlPrice.ResumeLayout(false);
@@ -345,6 +344,7 @@ namespace App.WindowsApp.Forms
             pnlid.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)numPrice).EndInit();
             ((System.ComponentModel.ISupportInitialize)numStock).EndInit();
+            pnlName.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -389,8 +389,6 @@ namespace App.WindowsApp.Forms
         private TableLayoutPanel tblProductForm;
         private Panel pnlStock;
         private Label lblStock;
-        private Panel pnlName;
-        private Label lblName;
         private Panel pnlCategory;
         private Label lblCategory;
         private Panel pnlPrice;
@@ -402,11 +400,13 @@ namespace App.WindowsApp.Forms
         private TextBox txtName;
         private ComboBox cmbCategory;
         private NumericUpDown numPrice;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flpBottom;
         private NumericUpDown numStock;
         private ComboBox cmbStatus;
         private TextBox txtID;
         private Button btnCancel;
         private Button btnSave;
+        private Panel pnlName;
+        private Label lblName;
     }
 }

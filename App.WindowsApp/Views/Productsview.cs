@@ -97,9 +97,9 @@ namespace App.WindowsaApp.Views
             //ProductStatusEnum? status = cmbStockStatus.SelectedItem != null ? (ProductStatusEnum)cmbStockStatus.SelectedItem : null;
 
             ProductCategoryEnum? selectedCategory = null;
-            if (cmbCategory.SelectedItem is ProductCategoryEnum)
+            if (cmbCategory.SelectedItem != null)
             {
-                if (cmbCategory.SelectedItem.ToString().Equals("--ALL"))
+                if (cmbCategory.SelectedItem.ToString().Equals("--ALL--"))
                 {
                     selectedCategory = null;
                 }
@@ -110,9 +110,9 @@ namespace App.WindowsaApp.Views
             }
 
             ProductStatusEnum? selectedStatus = null;
-            if (cmbStockStatus.SelectedItem is ProductStatusEnum)
+            if (cmbStockStatus.SelectedItem != null)
             {
-                if (cmbStockStatus.SelectedItem.ToString().Equals("--ALL"))
+                if (cmbStockStatus.SelectedItem.ToString().Equals("--ALL--"))
                 {
                     selectedStatus = null;
                 }
@@ -121,12 +121,6 @@ namespace App.WindowsaApp.Views
                     selectedStatus = (ProductStatusEnum)cmbStockStatus.SelectedItem;
                 }
             }
-
-
-
-
-
-
 
 
             _dgvBindingSource.DataSource = _service.Search(searchText, selectedCategory, selectedStatus);
