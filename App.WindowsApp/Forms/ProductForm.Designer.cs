@@ -53,8 +53,8 @@ namespace App.WindowsApp.Forms
             numStock = new NumericUpDown();
             cmbStatus = new ComboBox();
             txtID = new TextBox();
-            lblName = new Label();
             pnlName = new Panel();
+            lblName = new Label();
             pnltop.SuspendLayout();
             flpBottom.SuspendLayout();
             tblProductForm.SuspendLayout();
@@ -299,6 +299,15 @@ namespace App.WindowsApp.Forms
             txtID.Size = new Size(634, 23);
             txtID.TabIndex = 5;
             // 
+            // pnlName
+            // 
+            pnlName.Controls.Add(lblName);
+            pnlName.Dock = DockStyle.Fill;
+            pnlName.Location = new Point(3, 3);
+            pnlName.Name = "pnlName";
+            pnlName.Size = new Size(154, 25);
+            pnlName.TabIndex = 6;
+            // 
             // lblName
             // 
             lblName.Anchor = AnchorStyles.Left;
@@ -308,15 +317,6 @@ namespace App.WindowsApp.Forms
             lblName.TabIndex = 0;
             lblName.Text = "Name";
             lblName.Click += lblName_Click;
-            // 
-            // pnlName
-            // 
-            pnlName.Controls.Add(lblName);
-            pnlName.Dock = DockStyle.Fill;
-            pnlName.Location = new Point(3, 3);
-            pnlName.Name = "pnlName";
-            pnlName.Size = new Size(154, 25);
-            pnlName.TabIndex = 6;
             // 
             // ProductForm
             // 

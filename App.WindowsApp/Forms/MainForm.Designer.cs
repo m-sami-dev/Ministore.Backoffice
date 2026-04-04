@@ -39,7 +39,8 @@
             flpnav = new FlowLayoutPanel();
             btnDashboard = new Button();
             btnProducts = new Button();
-            btnOrder = new Button();
+            btnCustomer = new Button();
+            button1 = new Button();
             btnReports = new Button();
             btnSync = new Button();
             btnLogs = new Button();
@@ -158,7 +159,8 @@
             // 
             flpnav.Controls.Add(btnDashboard);
             flpnav.Controls.Add(btnProducts);
-            flpnav.Controls.Add(btnOrder);
+            flpnav.Controls.Add(btnCustomer);
+            flpnav.Controls.Add(button1);
             flpnav.Controls.Add(btnReports);
             flpnav.Controls.Add(btnSync);
             flpnav.Controls.Add(btnLogs);
@@ -207,22 +209,38 @@
             btnProducts.UseVisualStyleBackColor = true;
             btnProducts.Click += btnProducts_Click;
             // 
-            // btnOrder
+            // btnCustomer
             // 
-            btnOrder.FlatAppearance.BorderSize = 0;
-            btnOrder.FlatStyle = FlatStyle.Flat;
-            btnOrder.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnOrder.Image = Properties.Resources.order_history;
-            btnOrder.ImageAlign = ContentAlignment.MiddleLeft;
-            btnOrder.Location = new Point(4, 107);
-            btnOrder.Margin = new Padding(4, 3, 4, 3);
-            btnOrder.Name = "btnOrder";
-            btnOrder.Padding = new Padding(12, 0, 0, 0);
-            btnOrder.Size = new Size(233, 46);
-            btnOrder.TabIndex = 2;
-            btnOrder.Text = "Order";
-            btnOrder.UseVisualStyleBackColor = true;
-            btnOrder.Click += btnOrder_Click;
+            btnCustomer.FlatAppearance.BorderSize = 0;
+            btnCustomer.FlatStyle = FlatStyle.Flat;
+            btnCustomer.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnCustomer.Image = Properties.Resources.customer;
+            btnCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnCustomer.Location = new Point(4, 107);
+            btnCustomer.Margin = new Padding(4, 3, 4, 3);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.Padding = new Padding(12, 0, 0, 0);
+            btnCustomer.Size = new Size(233, 46);
+            btnCustomer.TabIndex = 2;
+            btnCustomer.Text = "Customer";
+            btnCustomer.UseVisualStyleBackColor = true;
+            btnCustomer.Click += btnCustomer_Click;
+            // 
+            // button1
+            // 
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Image = Properties.Resources.order_history;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(4, 159);
+            button1.Margin = new Padding(4, 3, 4, 3);
+            button1.Name = "button1";
+            button1.Padding = new Padding(12, 0, 0, 0);
+            button1.Size = new Size(233, 46);
+            button1.TabIndex = 7;
+            button1.Text = "Order";
+            button1.UseVisualStyleBackColor = true;
             // 
             // btnReports
             // 
@@ -231,7 +249,7 @@
             btnReports.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnReports.Image = Properties.Resources.Report;
             btnReports.ImageAlign = ContentAlignment.MiddleLeft;
-            btnReports.Location = new Point(4, 159);
+            btnReports.Location = new Point(4, 211);
             btnReports.Margin = new Padding(4, 3, 4, 3);
             btnReports.Name = "btnReports";
             btnReports.Padding = new Padding(12, 0, 0, 0);
@@ -248,7 +266,7 @@
             btnSync.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSync.Image = Properties.Resources.auto_sync;
             btnSync.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSync.Location = new Point(4, 211);
+            btnSync.Location = new Point(4, 263);
             btnSync.Margin = new Padding(4, 3, 4, 3);
             btnSync.Name = "btnSync";
             btnSync.Padding = new Padding(12, 0, 0, 0);
@@ -265,7 +283,7 @@
             btnLogs.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogs.Image = Properties.Resources.log_file;
             btnLogs.ImageAlign = ContentAlignment.MiddleLeft;
-            btnLogs.Location = new Point(4, 263);
+            btnLogs.Location = new Point(4, 315);
             btnLogs.Margin = new Padding(4, 3, 4, 3);
             btnLogs.Name = "btnLogs";
             btnLogs.Padding = new Padding(12, 0, 0, 0);
@@ -282,7 +300,7 @@
             btnSettings.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnSettings.Image = Properties.Resources.settings;
             btnSettings.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSettings.Location = new Point(4, 315);
+            btnSettings.Location = new Point(4, 367);
             btnSettings.Margin = new Padding(4, 3, 4, 3);
             btnSettings.Name = "btnSettings";
             btnSettings.Padding = new Padding(12, 0, 0, 0);
@@ -359,7 +377,7 @@
         private System.Windows.Forms.FlowLayoutPanel flpnav;
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnProducts;
-        private System.Windows.Forms.Button btnOrder;
+        private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Button btnReports;
         private System.Windows.Forms.Button btnSync;
         private System.Windows.Forms.Button btnLogs;
@@ -371,5 +389,6 @@
         private System.Windows.Forms.Label labelAdmin;
         private System.Windows.Forms.Label lblministore;
         private System.Windows.Forms.Panel panelContent;
+        private Button button1;
     }
 }

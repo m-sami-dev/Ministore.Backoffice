@@ -1,4 +1,8 @@
-﻿using System;
+﻿using App.core.Services;
+using App.Core.Services;
+using App.WindowsaApp.Views;
+using App.WindowsApp.Views;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,8 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using App.core.Services;
-using App.WindowsaApp.Views;
 
 namespace App.WindowsApp.Forms
 {
@@ -24,9 +26,9 @@ namespace App.WindowsApp.Forms
 
 
         InMemoryProductService _productService = new InMemoryProductService();
+        InMemoryCustomerService _customerService = new InMemoryCustomerService();
 
-
-        private readonly Dictionary<Type,UserControl> _views=new Dictionary<Type,UserControl>();
+        private readonly Dictionary<Type, UserControl> _views = new Dictionary<Type, UserControl>();
 
 
         public MainForm()
@@ -84,7 +86,7 @@ namespace App.WindowsApp.Forms
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             setActiveNavButton(btnDashboard);
-            ShowView(()=> new  DashboardView());
+            ShowView(() => new DashboardView());
 
         }
 
@@ -103,10 +105,10 @@ namespace App.WindowsApp.Forms
             {
                 view = factory();
                 _views[key] = view;
-                view.Dock=DockStyle.Fill;
+                view.Dock = DockStyle.Fill;
             }
 
-            panelContent.Controls.Clear();  
+            panelContent.Controls.Clear();
             panelContent.Controls.Add(view);
         }
 
@@ -168,6 +170,11 @@ namespace App.WindowsApp.Forms
         private void tsLabelStatus_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            ShowView(() => new CustomerView(_customerService));
         }
     }
 }

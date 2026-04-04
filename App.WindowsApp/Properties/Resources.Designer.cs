@@ -93,6 +93,16 @@ namespace App.WindowsApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap customer {
+            get {
+                object obj = ResourceManager.GetObject("customer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dashboard_monitor__1_ {
             get {
                 object obj = ResourceManager.GetObject("dashboard-monitor (1)", resourceCulture);
@@ -176,6 +186,36 @@ namespace App.WindowsApp.Properties {
         internal static System.Drawing.Bitmap store_buyer__1_ {
             get {
                 object obj = ResourceManager.GetObject("store-buyer (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap touchscreen {
+            get {
+                object obj = ResourceManager.GetObject("touchscreen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap touchscreen__1_ {
+            get {
+                object obj = ResourceManager.GetObject("touchscreen (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap touchscreen__2_ {
+            get {
+                object obj = ResourceManager.GetObject("touchscreen (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
